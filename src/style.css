@@ -75,7 +75,7 @@ body {
   
 }
 
-.review-title {
+.body-title {
   text-align: center;
   font-weight: bold;
   font-size: 64px;
@@ -84,7 +84,7 @@ body {
  
 }
 
-.review-content {
+.body-info {
   margin-top: 40px;
   display: grid;
   gap : 12px;
@@ -94,7 +94,7 @@ body {
 
 
 /* Review Cards */
-.review {
+.body-item {
   margin: 0px 25px;
   padding: 25px;
   border: 1px solid grey;
@@ -106,13 +106,13 @@ body {
   box-shadow: 10px 10px 5px 0px rgba(102,102,102,1);
 }
 
-.review h2 {
+.body-item  h2 {
   border-bottom: 1px solid black;
   padding-bottom: 10px;
 }
 
 
 
-.review .signiture {
+.body-item .signiture {
   font-weight: bold;
 }

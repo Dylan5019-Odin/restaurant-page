@@ -1,56 +1,43 @@
-let reviews = [
-  {
-    name: "Tyler Letty",
-    rating: "⭐⭐⭐⭐⭐",
-    review:
-      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus obcaecati praesentium voluptatem, nesciunt sequi ",
-  },
-  {
-    name: "John Doe",
-    rating: "⭐⭐⭐",
-    review:
-      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus obcaecati praesentium voluptatem, nesciunt sequi ",
-  },
-  {
-    name: "Christina Adams",
-    rating: "⭐⭐⭐⭐",
-    review:
-      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus obcaecati praesentium voluptatem, nesciunt sequi ",
-  },
-];
-
 //Function that generate the Body
-const generateBody = () => {
+const generateBody = (items) => {
   let contentContainer = document.getElementById("content");
 
   //Div that contians the Body Section
   const bodyDiv = document.createElement("div");
   bodyDiv.classList.add("body-content");
 
-  //Body Title
-  const reviewTitle = document.createElement("h1");
-  reviewTitle.classList.add("review-title");
-  reviewTitle.textContent = "Reviews";
-  bodyDiv.append(reviewTitle);
+  const bodyTitle = document.createElement("h2");
+  bodyTitle.classList.add("body-title");
+  bodyTitle.textContent = "Reviews";
 
-  const reviewDiv = document.createElement("div");
-  reviewDiv.classList.add("review-content");
+  bodyDiv.append(bodyTitle);
 
-  bodyDiv.append(reviewDiv);
+  const bodyContentDiv = document.createElement("div");
+  bodyContentDiv.classList.add("body-info");
 
-  // Creates the Review Cards
-  for (let i = 0; i < reviews.length; i++) {
-    const review = document.createElement("div");
+  bodyDiv.append(bodyContentDiv);
 
-    review.classList.add("review");
+  // Creates the Item Cards Depending on the type
+  for (let i = 0; i < items.length; i++) {
+    const item = document.createElement("div");
 
-    review.innerHTML = `<div>
-      <h2>${reviews[i].rating}</h2>
-      <p>${reviews[i].review}</p>
-      <p class="signiture">-${reviews[i].name}</p>
+    item.classList.add("body-item");
+
+    if (items[i].type == "review") {
+      item.innerHTML = `<div>
+      <h2>${items[i].rating}</h2>
+      <p>${items[i].desc}</p>
+      <p class="signiture">-${items[i].name}</p>
     </div>`;
+    } else if (items[i].type == "menu") {
+      item.innerHTML = `<div>
+      <h2>${items[i].name}</h2>
+      <p>${items[i].desc}</p>
+      
+    </div>`;
+    }
 
-    reviewDiv.append(review);
+    bodyContentDiv.append(item);
   }
 
   contentContainer.append(bodyDiv);
