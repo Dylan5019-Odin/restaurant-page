@@ -1,10 +1,10 @@
 import Header from "./banner.jpg";
 
-//Function that combines the header and review section
+//Function that generate the Header
 const generateHeader = () => {
   let contentContainer = document.getElementById("content");
 
-  //Div that contians the Header
+  //Div that contians the Header Section
   const headerDiv = document.createElement("div");
   headerDiv.classList.add("header");
 
@@ -15,7 +15,7 @@ const generateHeader = () => {
   // Banner Text
   const headerText = document.createElement("h1");
   headerText.classList.add("header-text");
-  headerText.textContent = "Dylans Resaurant";
+  headerText.textContent = "Dylan's Resaurant";
 
   headerDiv.appendChild(headerImg);
   headerDiv.appendChild(headerText);
