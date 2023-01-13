@@ -11,24 +11,24 @@ body {
 .header {
   display: flex;
   justify-content: center;
-  height: 500px;
+  height: 400px;
   width: 100vw;
-  background: black;
+  background: #19130F;
   overflow: hidden;
 }
 
 .header img {
   object-fit: cover;
-  width:100vw;
-  height: 500px;
-  opacity: 0.4;
+  width:  100vw;
+  height: 400px;
+  opacity: 0.3;
 }
 
 .header-text {
   position: absolute;
-  top: 10%;
+  top: 5%;
   color: white;
-  font-size: 64px;
+  font-size: 72px;
   box-shadow: 0 3px 0 -1px white;
 }
 
@@ -46,7 +46,10 @@ body {
 .review-title {
   text-align: center;
   font-weight: bold;
-  text-decoration: underline;
+  font-size: 64px;
+  letter-spacing: 2px;
+  margin: 15px 0px;
+ 
 }
 
 .review-content {
