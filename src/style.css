@@ -116,3 +116,13 @@ body {
 .body-item .signiture {
   font-weight: bold;
 }
+
+/* Contact Page */
+
+.body-contact {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}

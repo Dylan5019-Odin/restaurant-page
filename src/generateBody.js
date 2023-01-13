@@ -3,12 +3,12 @@ const generateBody = (items) => {
   let contentContainer = document.getElementById("content");
 
   //Div that contians the Body Section
-  const bodyDiv = document.createElement("div");
+  const bodyDiv = document.getElementById("body-content");
   bodyDiv.classList.add("body-content");
 
   const bodyTitle = document.createElement("h2");
   bodyTitle.classList.add("body-title");
-  bodyTitle.textContent = "Reviews";
+  bodyTitle.textContent = `${items[0].type.toUpperCase()}`;
 
   bodyDiv.append(bodyTitle);
 
@@ -23,7 +23,7 @@ const generateBody = (items) => {
 
     item.classList.add("body-item");
 
-    if (items[i].type == "review") {
+    if (items[i].type == "reviews") {
       item.innerHTML = `<div>
       <h2>${items[i].rating}</h2>
       <p>${items[i].desc}</p>
@@ -33,7 +33,6 @@ const generateBody = (items) => {
       item.innerHTML = `<div>
       <h2>${items[i].name}</h2>
       <p>${items[i].desc}</p>
-      
     </div>`;
     }
 

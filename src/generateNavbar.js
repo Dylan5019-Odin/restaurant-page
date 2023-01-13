@@ -16,10 +16,13 @@ const generateNavbar = () => {
   
 
   const homeButton = document.createElement("button");
+  homeButton.id = "home";
   homeButton.innerHTML = "Home";
   const menuButton = document.createElement("button");
+   menuButton.id = "menu";
    menuButton.innerHTML = "Menu";
   const contactButton = document.createElement("button");
+  contactButton.id = "contact";
   contactButton.innerHTML = "Contact Us";
 
   links.append(homeButton);
