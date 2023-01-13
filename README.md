@@ -1,5 +1,5 @@
 # restaurant-page
-A mock resaurant webpage that I created to help familiarize myself with webkit.  
+A mock resaurant webpage that I created to help familiarize myself with webpack.  
 This project also helped with my knowledge of creating elements using js.  
   
 Banner IMG:  
